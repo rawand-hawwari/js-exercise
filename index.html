@@ -1,0 +1,145 @@
+<html>
+    <head>
+        <title>javascript exercises</title>
+    </head>
+    <body>
+        <h1>JavaScript Execises</h1><br><hr><br>
+        <p>Question 2: Show entered number</p>
+        <button onclick="question2()">Enter a number</button>
+
+        <br><hr><br>
+        <p>Question 3: Show numbers in an ascending order</p>
+        <button onclick="question3()">Enter two numbers</button>
+
+        <br><hr><br>
+        <p>Question 4: Display the larger number</p>
+        <button onclick="question4()">Enter two numbers</button>
+
+        <br><hr><br>
+        <p>Question 5: Summation of two numbers</p>
+        <button onclick="question5()">Enter two numbers</button>
+
+        <br><hr><br>
+        <p>Question 6: Display The number of one digit in words</p>
+        <button onclick="question6()">Enter a number of one digit</button>
+        <p id="numToWord"></p>
+
+        <script>
+            // q1:
+            // 1.
+            -9*3; // = -27
+
+            // 2.
+            "value is " + 50; // = value is 50
+
+            // 3.
+            17 % 5; // = 2
+
+            // 4.
+            5 % 17; // = 5
+
+            // 5.
+            5/10; // = 0.5
+
+            // 6.
+            (4 == 4); // = true
+
+            // 7.
+            (4 != 5); // = true
+
+            // 8.
+            (7 <= 8); // = true
+
+            // 9.
+            Math.ceil(x) - Math.floor(x); // = NaN
+
+            // q2
+            function question2(){
+                let num = Number(prompt("Please enter a number"));
+                window.alert("The number you've entered is " + num);
+            }
+
+            // q3
+            function question3(){
+                let num1 = Number(prompt("Please enter a number"));
+                let num2 = Number(prompt("Please enter a number"));
+
+                if(num1 > num2){
+                    window.alert("The numbers you've entered are " + num2 + " " + num1);
+                }
+                else if(num2 > num1){
+                    window.alert("The numbers you've entered are " + num1 + " " + num2);
+                }
+                else{
+                    window.alert("Something went wrong please try again");
+                }
+            }
+
+            // q4
+            function question4(){
+                let num1 = Number(prompt("Please enter a number"));
+                let num2 = Number(prompt("Please enter a number"));
+
+                if(num1 > num2){
+                    window.alert("The Larger number is " + num1);
+                }
+                else if(num2 > num1){
+                    window.alert("The Larger number is " + num2);
+                }
+                else{
+                    window.alert("Something went wrong please try again");
+                }
+            }
+        
+            // q5
+            function question5(){
+                let num1 = Number(prompt("Please enter a number"));
+                let num2 = Number(prompt("Please enter a number"));
+                let sum = Number(num1 + num2);
+                if(isNaN(sum)){
+                    window.alert("Something went wrong please try again");
+                }
+                else{
+                    window.alert("The summation of these two numbers is " + sum);
+                }
+            }
+    
+            // q6
+            function question6(){
+                let num = Number(prompt("Please enter a number"));
+                switch(num){
+                    case 1:
+                        document.getElementById("numToWord").innerHTML = "ONE";
+                        break;
+                    case 2:
+                        document.getElementById("numToWord").innerHTML = "TWO";
+                        break;
+                    case 3:
+                        document.getElementById("numToWord").innerHTML = "THREE";
+                        break;
+                    case 4:
+                        document.getElementById("numToWord").innerHTML = "FOUR";
+                        break;
+                    case 5:
+                        document.getElementById("numToWord").innerHTML = "FIVE";
+                        break;
+                    case 6:
+                        document.getElementById("numToWord").innerHTML = "SIX";
+                        break;
+                    case 7:
+                        document.getElementById("numToWord").innerHTML = "SEVEN";
+                        break;
+                    case 8:
+                        document.getElementById("numToWord").innerHTML = "EIGHT";
+                        break;
+                    case 9:
+                        document.getElementById("numToWord").innerHTML = "NINE";
+                        break;
+                    default:
+                        document.getElementById("numToWord").innerHTML = "PLEASE TRY AGAIN";
+                }
+            }        
+
+        </script>
+    </body>
+</html>
